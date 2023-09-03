@@ -17,7 +17,7 @@ import { useEffect } from 'react';
 export default function Modal({onClose, children, isShow, setIsShow, timeOut}) {
 
     useEffect(() => {
-        if (isShow) {
+        if (isShow && timeOut) {
           const timeoutId = setTimeout(() => {
             setIsShow(false); // Close Modal after 3sec
           }, timeOut);
@@ -47,5 +47,5 @@ Modal.propTypes = {
         PropTypes.node]).isRequired,
     isShow: PropTypes.bool.isRequired,
     setIsShow: PropTypes.func.isRequired, 
-    timeOut: PropTypes.number.isRequired
+    timeOut: PropTypes.number
 }

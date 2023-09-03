@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <button onClick={() => setIsShow(true)}>Ouvrir</button>
-      <Modal onClose={() => setIsShow(false)} isShow={isShow}>
+      <Modal onClose={() => setIsShow(false)} isShow={isShow} setIsShow={setIsShow}>
         <p>Cool !</p>
       </Modal>
     </>

@@ -2,7 +2,7 @@
   "name": "@antoinea95/modal-component-hrnet",
   "author": "antoinea95 <antoineamr95@gmail.com>",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.9",
   "type": "module",
   "main": "dist/modal-component-hrnet.js",
   "files": [

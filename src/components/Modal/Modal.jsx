@@ -28,7 +28,7 @@ export default function Modal({onClose, children, isShow, setIsShow, timeOut}) {
       }, [isShow, setIsShow, timeOut]);
 
 
-    return createPortal(
+    return isShow ? createPortal(
     <IconContext.Provider value={{className:`${styles.closebtn}`}}>
         <div className={`${isShow ? `${styles.modal} ${styles.active}` : styles.modal}`}>
             <button className={styles.close} onClick={onClose}>
@@ -37,7 +37,7 @@ export default function Modal({onClose, children, isShow, setIsShow, timeOut}) {
             <div className={styles.content}>{children}</div>
         </div>
     </IconContext.Provider>, document.body
-    )
+    ) : null;
 }
 
 Modal.propTypes = {

@@ -3,8 +3,30 @@ import styles from "./styles.module.css";
 import { IconContext } from 'react-icons';
 import {AiFillCloseCircle} from 'react-icons/ai';
 import { createPortal } from 'react-dom';
+import { useEffect } from 'react';
 
-export default function Modal({onClose, children, isShow}) {
+/**
+ * 
+ * @param {function} onClose to reset isShow and close modal by clicking on close button
+ * @param {React.ReactNode} children content to display in modal
+ * @param {boolean} isShow
+ * @param {function} setIsShow to change isShow value
+ * @param {number} timeOut number in miliseconds to close modal automaticly
+ * 
+ */
+export default function Modal({onClose, children, isShow, setIsShow, timeOut}) {
+
+    useEffect(() => {
+        if (isShow) {
+          const timeoutId = setTimeout(() => {
+            setIsShow(false); // Close Modal after 3sec
+          }, timeOut);
+          
+          // Clear time out before component render
+          return () => clearTimeout(timeoutId);
+        }
+      }, [isShow, setIsShow, timeOut]);
+
 
     return createPortal(
     <IconContext.Provider value={{className:`${styles.closebtn}`}}>
@@ -23,5 +45,7 @@ Modal.propTypes = {
     children: PropTypes.oneOfType([
         PropTypes.arrayOf(PropTypes.node),
         PropTypes.node]).isRequired,
-    isShow: PropTypes.bool.isRequired
+    isShow: PropTypes.bool.isRequired,
+    setIsShow: PropTypes.func.isRequired, 
+    timeOut: PropTypes.number.isRequired
 }

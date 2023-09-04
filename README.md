@@ -1,4 +1,4 @@
-# Modal component HRnet 
+bs# Modal component HRnet 
 
 This is a modal component for React. Developped for a student project and used in [P14-hrnet](https://github.com/antoinea95/p14hrnet)
 
@@ -52,7 +52,41 @@ function MyComponent() {
 }
 ```
 
-You can also display Modal
+You can also display Modal without an Opening button, this an exemple with a confirmed Form : 
+
+```jsx
+function MyComponent() {
+  const [isShow, setIsShow] = useState(false)
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsShow(true);
+  }
+
+  return (
+    <>
+    <form onSubmit={(e) =>{handleSubmit(e)}}>
+        <label htmlFor="email">E-mail</label>
+        <input type="email" name="email" id="email" />
+
+        <label htmlFor="password">Password</label>
+        <input type="password" name="password" id="password" />
+
+        <button type="submit"> Se connecter </button>
+    </form>
+    {isShow && 
+        <Modal
+          onClose={() => setIsShow(false)}
+          isShow={isShow}
+          setIsShow={setIsShow}
+          timeOut={3000} //optionnal, if you want modal close automatically
+        >
+            <p> User connected </p>
+        </Modal>
+    }
+  )
+}
+```
 
 ## Props
 
@@ -64,5 +98,6 @@ The `Modal` component props you need:
 | onClose  | () => void  | Callback function to be called when the modal is closed. | Yes | - |
 | isShow  | boolean | Boolean indicating whether the modal is open or closed. | Yes | - |
 | setIsShow | () => void | Callback function to change isShow value  | Yes | - |
+| timeOut | number | Number in miliseconds to close Modal automatically  | No | - |
 
 

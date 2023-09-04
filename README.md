@@ -4,7 +4,7 @@ This is a modal component for React. Developped for a student project and used i
 
 ### Prerequisites
 
-- [Node.js (Version 18.16.0)](https://nodejs.org/en/)
+- [Node.js (Version 18.12.1)](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
 - *(Recommended IDE)* [VSCode](https://code.visualstudio.com/)
 

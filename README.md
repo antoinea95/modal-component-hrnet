@@ -39,7 +39,6 @@ function MyComponent() {
   return (
     <div>
         <button onClick={() => setIsShow(true)}>Open Modal</button>
-
         <Modal
           onClose={() => setIsShow(false)}
           isShow={isShow}
@@ -52,6 +51,8 @@ function MyComponent() {
   )
 }
 ```
+
+You can also display Modal
 
 ## Props
 

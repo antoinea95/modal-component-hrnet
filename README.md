@@ -1,6 +1,6 @@
 # Modal component HRnet 
 
-This is a modal component for React. Developped for a student project and used in P14-hrnet(https://github.com/antoinea95/p14hrnet)
+This is a modal component for React. Developped for a student project and used in [P14-hrnet](https://github.com/antoinea95/p14hrnet)
 
 ### Prerequisites
 

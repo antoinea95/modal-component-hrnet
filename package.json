@@ -1,8 +1,17 @@
 {
   "name": "@antoinea95/modal-component-hrnet",
   "author": "antoinea95 <antoineamr95@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antoinea95/modal-component-hrnet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/antoinea95/modal-component-hrnet/issues"
+  },
+  "homepage": "https://github.com/antoinea95/modal-component-hrnet#readme",
   "private": false,
-  "version": "0.0.9",
+  "version": "1.0.0",
   "type": "module",
   "main": "dist/modal-component-hrnet.js",
   "files": [

@@ -74,16 +74,14 @@ function MyComponent() {
 
         <button type="submit"> Se connecter </button>
     </form>
-    {isShow && 
-        <Modal
-          onClose={() => setIsShow(false)}
-          isShow={isShow}
-          setIsShow={setIsShow}
-          timeOut={3000} //optionnal, if you want modal close automatically
-        >
-            <p> User connected </p>
-        </Modal>
-    }
+    <Modal
+      onClose={() => setIsShow(false)}
+      isShow={isShow}
+      setIsShow={setIsShow}
+      timeOut={3000} //optionnal, if you want modal close automatically
+      >
+        <p> User connected </p>
+    </Modal>
   )
 }
 ```

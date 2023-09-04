@@ -11,7 +11,7 @@
   },
   "homepage": "https://github.com/antoinea95/modal-component-hrnet#readme",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/modal-component-hrnet.js",
   "files": [
